@@ -45,7 +45,7 @@ export default function Home() {
   <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-orange-400/10 blur-[120px] rounded-full" />
 
   <motion.div {...fadeIn} className="relative z-10 max-w-5xl mx-auto text-center md:text-left">
-    <h1 className="text-7xl md:text-9xl font-black text-gradient">
+    <h1 className="text-7xl md:text-9xl font-black text-gradient text-5xl md:text-9xl font-black text-gradient leading-tight">
       SAVISHKA <br />
       <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600 italic">
         NISHEN
@@ -117,7 +117,7 @@ export default function Home() {
               </h2>
               
               {/* Tab Selector */}
-              <div className="flex gap-2 mb-8 bg-white/5 p-1 rounded-2xl border border-white/5 w-fit">
+              <div className="flex gap-2 mb-8 bg-white/5 p-1 rounded-2xl border border-white/5 w-full overflow-x-auto md:w-fit no-scrollbar">
                 {["frontend", "backend", "tools"].map((tab) => (
                   <button
                     key={tab}
@@ -163,7 +163,7 @@ export default function Home() {
 
         {/* --- EDUCATION SECTION --- */}
         <section id="education" className="py-24 px-6 md:px-20">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
             <h2 className="text-orange-500 font-mono text-sm tracking-[0.3em] uppercase mb-6 underline decoration-orange-500/30 underline-offset-8">
               Academic
             </h2>
@@ -172,11 +172,11 @@ export default function Home() {
               <div className="h-px flex-1 bg-white/10" />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:col-span-2 p-6 md:p-10">
               <div className="md:col-span-2 p-10 rounded-[2.5rem] bg-gradient-to-br from-orange-600/10 to-transparent border border-white/10 relative overflow-hidden group">
                 <BookOpen className="absolute -right-10 -bottom-10 w-48 h-48 text-white/5 rotate-12 group-hover:rotate-0 transition-transform duration-700" />
                 <span className="bg-orange-500 text-[10px] text-black font-bold uppercase tracking-widest px-3 py-1 rounded-full">NIBM</span>
-                <h3 className="text-3xl font-bold mt-6 mb-2">BSc (Hons) in Computing</h3>
+                <h3 className="text-2xl md:text-3xl font-bold mt-6 mb-2">BSc (Hons) in Computing</h3>
                 <p className="text-orange-400 text-sm mb-4">National Institute of Business Management, Colombo</p>
                 <p className="text-gray-400 max-w-md leading-relaxed">Focusing on software engineering, web technologies, and systems development. Contributed to IoT projects and advanced data structures.</p>
                 <div className="mt-8 text-orange-400 font-mono text-sm">2024 — Present (2nd year undergraduate)</div>

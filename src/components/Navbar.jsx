@@ -6,6 +6,7 @@ export default function Navbar() {
   const { scrollY } = useScroll();
   const [isVisible, setIsVisible] = useState(false); // Starts hidden for the animation
   const [isScrollingDown, setIsScrollingDown] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   // 1. Handle the Initial Page Load (Naruto Animation)
   useEffect(() => {
@@ -30,35 +31,39 @@ export default function Navbar() {
   });
 
   return (
-    <motion.nav
-      // Control position: 
-      // - If not visible yet: stay at -100
-      // - If scrolling down: stay at -100
-      // - Otherwise: show at 0
-      animate={{ 
-        y: (!isVisible || isScrollingDown) ? -100 : 0,
-        opacity: (!isVisible || isScrollingDown) ? 0 : 1 
-      }}
-      transition={{ duration: 0.4, ease: "easeInOut" }}
-      className="fixed top-6 left-1/2 -translate-x-1/2 z-[60] w-[90%] max-w-4xl pointer-events-auto"
-    >
-      <div className="bg-black/40 backdrop-blur-xl border border-white/10 px-6 py-3 rounded-full flex justify-between items-center shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-        
-        {/* Logo - Matching your Orange Theme */}
-        <span className="font-black tracking-tighter text-sm md:text-base">
-          <span className="text-white">Savishka</span>
-          <span className="text-orange-500 italic"> Nishen</span>
-        </span>
+   <motion.nav >
+    <div className="bg-black/40 backdrop-blur-xl border border-white/10 px-6 py-3 rounded-full flex justify-between items-center relative">
+      <span className="font-black tracking-tighter text-sm md:text-base whitespace-nowrap">
+        <span className="text-white">Savishka</span>
+        <span className="text-orange-500 italic"> Nishen</span>
+      </span>
 
-        {/* Links */}
-        <div className="flex items-center gap-4 md:gap-8 text-[11px] font-bold uppercase tracking-widest text-gray-400">
-          <a href="#projects" className="hover:text-orange-400 transition-colors">Projects</a>
-          <a href="#about" className="hover:text-orange-400 transition-colors">About</a>
-          <a href="#contact" className="bg-orange-500 text-black px-5 py-2 rounded-full hover:bg-white transition-all duration-300">
-            Contact
-          </a>
-        </div>
+      {/* Desktop Links - Hidden on mobile */}
+      <div className="hidden md:flex items-center gap-8 text-[11px] font-bold uppercase tracking-widest text-gray-400">
+        <a href="#projects" className="hover:text-orange-400">Projects</a>
+        <a href="#about" className="hover:text-orange-400">About</a>
+        <a href="#contact" className="bg-orange-500 text-black px-5 py-2 rounded-full hover:bg-white transition-all">
+          Contact
+        </a>
       </div>
-    </motion.nav>
+
+      {/* Mobile Toggle Button - Visible only on small screens */}
+      <button 
+        onClick={() => setIsOpen(!isOpen)}
+        className="md:hidden text-white p-2"
+      >
+        {isOpen ? "✕" : "☰"}
+      </button>
+
+      {/* Mobile Menu Dropdown */}
+      {isOpen && (
+        <div className="absolute top-full left-0 right-0 mt-4 bg-black/90 border border-white/10 rounded-2xl p-6 flex flex-col gap-4 md:hidden text-center backdrop-blur-lg">
+          <a href="#projects" onClick={() => setIsOpen(false)}>Projects</a>
+          <a href="#about" onClick={() => setIsOpen(false)}>About</a>
+          <a href="#contact" onClick={() => setIsOpen(false)} className="text-orange-500">Contact</a>
+        </div>
+      )}
+    </div>
+  </motion.nav>
   );
 }

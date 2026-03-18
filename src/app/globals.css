@@ -28,6 +28,8 @@ body {
   min-height: 100vh; 
   margin: 0;
   padding: 0;
+  width: 100%;
+  position: relative;
   
   /* Multi-layered Premium Mesh Gradient */
   background-image: 
@@ -97,4 +99,11 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #ffb347;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
