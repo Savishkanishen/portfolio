@@ -5,7 +5,7 @@ export default function Footer() {
     { 
       name: "LinkedIn", 
       icon: <Linkedin size={16} />, // Size reduced to 16
-      url: "https://linkedin.com/in/your-profile", 
+      url: "https://www.linkedin.com/in/savishka-nishen-a741742a3/", 
       glow: "group-hover:text-blue-500" 
     },
     { 
@@ -18,13 +18,13 @@ export default function Footer() {
     { 
       name: "Instagram", 
       icon: <Instagram size={16} />, // Size reduced to 16
-      url: "https://instagram.com/your-profile", 
+      url: "https://www.instagram.com/savishka.nishen?igsh=MW85NDJ3cWYwbjZhMg%3D%3D&utm_source=qr", 
       glow: "group-hover:text-pink-500" 
     },
     { 
       name: "GitHub", 
       icon: <Github size={16} />, // Size reduced to 16
-      url: "https://github.com/Savishkanishen", 
+      url: "https://github.com/Savishkanishen/", 
       glow: "group-hover:text-white" 
     },
   ];

@@ -52,7 +52,7 @@ export default function Home() {
       </span>
     </h1>
     <p className="text-gray-400 text-xl md:text-2xl max-w-2xl font-light leading-relaxed mb-10">
-      Full-stack Developer & <span className="text-white font-medium">IoT Engineer</span>. 
+      Full-stack Developer & IOT engineer. 
       I build microservices and smart hardware for the next generation of tech.
     </p>
     
@@ -104,7 +104,7 @@ export default function Home() {
               </h2>
               <h3 className="text-4xl font-bold mb-6 text-white">Bridging Hardware & Software.</h3>
               <p className="text-gray-400 text-lg leading-relaxed mb-8">
-                A Software Engineering student (24.1 Badge) at NIBM with a deep focus on **Java Spring Boot** and **IoT ecosystems**. 
+                A Software Engineering student (24.1 Badge) at NIBM with a deep focus on Java Spring Boot/python/.net/  and IoT ecosystems. 
                 Whether it's designing RESTful microservices or acoustic pattern detection for agriculture, 
                 I thrive on technical complexity.
               </p>
@@ -196,7 +196,10 @@ export default function Home() {
             <h2 className="text-4xl font-bold mb-16 text-center">Featured Craft</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               <ProjectItem title="Coconut Beetle Detector" desc="Smart IoT hardware using ESP32 to prevent agricultural loss through acoustic analysis." tags={["Hardware", "Firebase", "C++"]} />
-              <ProjectItem title="Microservices School Admin" desc="Scalable school management system with high-availability Java backend." tags={["Spring Boot", "MySQL", "Docker"]} />
+              <ProjectItem title="Microservices School Managment" desc="Scalable school management system with high-availability Java backend." tags={["Spring Boot","Java", "MySQL"]} />
+              <ProjectItem title="Smart sudy planner" desc="study plan manager for students that make esy to they usin Ai to make the notes and study plan to syudents " tags={["Data structures","Java", "Gemini (Google Api)"]} />
+              <ProjectItem title="leaf creast(brand web)" desc="Web site to a brand that to promote tea for they customers " tags={["Next.js","JavaScript", "Whatsapp msg"]} />
+              
             </div>
           </div>
         </section>
