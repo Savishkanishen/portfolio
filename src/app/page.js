@@ -197,7 +197,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               <ProjectItem title="Coconut Beetle Detector" desc="Smart IoT hardware using ESP32 to prevent agricultural loss through acoustic analysis." tags={["Hardware", "Firebase", "C++"]} />
               <ProjectItem title="Microservices School Managment" desc="Scalable school management system with high-availability Java backend." tags={["Spring Boot","Java", "MySQL"]} />
-              <ProjectItem title="Smart sudy planner" desc="study plan manager for students that make esy to they usin Ai to make the notes and study plan to syudents " tags={["Data structures","Java", "Gemini (Google Api)"]} />
+              <ProjectItem title="Smart study planner" desc="study plan manager for students that make esy to they usin Ai to make the notes and study plan to syudents " tags={["Data structures","Java", "Gemini (Google Api)"]} />
               <ProjectItem title="leaf creast(brand web)" desc="Web site to a brand that to promote tea for they customers " tags={["Next.js","JavaScript", "Whatsapp msg"]} />
               
             </div>
